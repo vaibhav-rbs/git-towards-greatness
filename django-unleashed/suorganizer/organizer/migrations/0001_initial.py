@@ -58,11 +58,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='startup',
             name='tags',
-            field=models.ManyToManyField(to='organizer.Tag'),
+            field=models.ManyToManyField(to='blog.Tag'),
         ),
         migrations.AddField(
             model_name='newslink',
             name='startup',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='organizer.Startup'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='blog.Startup'),
         ),
     ]

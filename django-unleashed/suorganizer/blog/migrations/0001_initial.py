@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('organizer', '0001_initial'),
+        ('blog', '0001_initial'),
     ]
 
     operations = [
@@ -22,8 +22,8 @@ class Migration(migrations.Migration):
                 ('slug', models.SlugField(help_text='A lable for URL config.', max_length=63, unique_for_month='pub_date')),
                 ('text', models.TextField()),
                 ('pub_date', models.DateField(auto_now_add=True, verbose_name='date published')),
-                ('startups', models.ManyToManyField(related_name='blog_posts', to='organizer.Startup')),
-                ('tags', models.ManyToManyField(related_name='blog_posts', to='organizer.Tag')),
+                ('startups', models.ManyToManyField(related_name='blog_posts', to='blog.Startup')),
+                ('tags', models.ManyToManyField(related_name='blog_posts', to='blog.Tag')),
             ],
             options={
                 'verbose_name': 'blog post',
