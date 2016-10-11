@@ -1,0 +1,15 @@
+{% extends parent_template|default:"organizer/base_organizer.html" %}
+
+{% block content %}
+<h2> Startup List</h2>
+<ul>
+    {% for startup in startup_list %}
+    <li>
+    <a href="">
+        {{startup.name}}</a>
+    </li>
+    {% empty %}
+    <li><em>No Startups available</em></li>
+    {% endfor %}
+</ul>
+{% endblock %}
